@@ -13,14 +13,13 @@ namespace Game_Kudinov_Daniil
     /// </summary>
     class Asteroid : BaseObject
     {
-        string path = ".\\img\\asteroid_01.png";
+        static Image asteroidImage = Image.FromFile(".\\img\\asteroid_01.png");
         public Asteroid(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
         }
 
         public override void Draw()
-        {
-            Image asteroidImage = Image.FromFile(path);
+        {           
             Game.Buffer.Graphics.DrawImage(asteroidImage, Pos.X, Pos.Y, Size.Width, Size.Height);
         }
     }

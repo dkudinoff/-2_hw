@@ -14,15 +14,14 @@ namespace Game_Kudinov_Daniil
     /// </summary>
     class Planet : BaseObject
     {
-        string path = ".\\img\\planet_01.png";
+        static Image asteroidImage = Image.FromFile(".\\img\\planet_01.png");
         Random rnd = new Random();
         public Planet(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
         }
 
         public override void Draw()
-        {
-            Image asteroidImage = Image.FromFile(path);
+        {           
             Game.Buffer.Graphics.DrawImage(asteroidImage, Pos.X, Pos.Y, Size.Width, Size.Height);
         }
 

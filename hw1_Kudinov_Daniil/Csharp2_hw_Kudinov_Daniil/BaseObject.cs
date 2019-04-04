@@ -3,32 +3,48 @@ using System.Drawing;
 
 namespace Game_Kudinov_Daniil
 {
-    public class BaseObject
+    public abstract class BaseObject : ICollision
     {
         
-        protected Point Pos;
-        protected Point Dir;
-        protected Size Size;
+        public Point Pos;
+        public Point Dir;
+        public Size Size;
 
 
-        public BaseObject(Point pos, Point dir, Size size)
+        protected BaseObject(Point pos, Point dir, Size size) 
         { 
             Pos = pos;
             Dir = dir;
             Size = size;
+
+            ///Обработка исключения при некорректном размере объекта
+            if (Size.Height > Game.Height ||
+                Size.Height < 0 ||
+                Size.Width > Game.Width ||
+                Size.Width < 0 ||
+                Size.Height*Size.Width>Game.Height*Game.Width/3
+                )
+                throw new GameObjectException("Ошибка! Некорректный размер объекта!");
+
+            ///Обработка исключения при некорректной скорости объекта
+            if (Dir.X>Game.Width/20 ||
+                Dir.Y>Game.Height/20 ||
+                Dir.X < -Game.Width / 20 ||
+                Dir.Y < -Game.Height / 20 ||
+                Math.Sqrt(Dir.X*Dir.X+Dir.Y*Dir.Y)> Math.Sqrt(Game.Width * Game.Width + Game.Height * Game.Height)/20 ||
+                Math.Sqrt(Dir.X*Dir.X+Dir.Y*Dir.Y)< -Math.Sqrt(Game.Width * Game.Width + Game.Height * Game.Height)/20
+                )
+                throw new GameObjectException("Ошибка! Некорректная скорость объекта!");
         }
-        public virtual void Draw()
-        {
-            Game.Buffer.Graphics.DrawEllipse(Pens.White, Pos.X, Pos.Y, Size.Width, Size.Height);          
-        }
-        public virtual void Update()
-        {
-            Pos.X = Pos.X + Dir.X;
-            Pos.Y = Pos.Y + Dir.Y;
-            if (Pos.X < 0) Dir.X = -Dir.X;
-            if (Pos.X > Game.Width) Dir.X = -Dir.X;
-            if (Pos.Y < 0) Dir.Y = -Dir.Y;
-            if (Pos.Y > Game.Height) Dir.Y = -Dir.Y;
-        }
+
+        public abstract void Draw();
+
+        public abstract void Update();
+
+        public bool Collision(ICollision o) => o.Rect.IntersectsWith(this.Rect);
+
+        public Rectangle Rect => new Rectangle(Pos, Size);
+
     }
+
 }

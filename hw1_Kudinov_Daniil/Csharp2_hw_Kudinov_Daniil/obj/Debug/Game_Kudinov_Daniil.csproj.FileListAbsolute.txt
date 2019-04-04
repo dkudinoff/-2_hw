@@ -5,3 +5,10 @@ E:\Projects\C_sharp_2_hw_Kudinov_Daniil\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Da
 E:\Projects\C_sharp_2_hw_Kudinov_Daniil\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\obj\Debug\Game_Kudinov_Daniil.csproj.CoreCompileInputs.cache
 E:\Projects\C_sharp_2_hw_Kudinov_Daniil\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\obj\Debug\Csharp2_hw_Kudinov_Daniil.exe
 E:\Projects\C_sharp_2_hw_Kudinov_Daniil\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\obj\Debug\Csharp2_hw_Kudinov_Daniil.pdb
+E:\Projects\C#2_hw\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\obj\Debug\Game_Kudinov_Daniil.csprojAssemblyReference.cache
+E:\Projects\C#2_hw\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\obj\Debug\Game_Kudinov_Daniil.csproj.CoreCompileInputs.cache
+E:\Projects\C#2_hw\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\obj\Debug\Csharp2_hw_Kudinov_Daniil.exe
+E:\Projects\C#2_hw\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\obj\Debug\Csharp2_hw_Kudinov_Daniil.pdb
+E:\Projects\C#2_hw\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\bin\Debug\Csharp2_hw_Kudinov_Daniil.exe.config
+E:\Projects\C#2_hw\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\bin\Debug\Csharp2_hw_Kudinov_Daniil.exe
+E:\Projects\C#2_hw\hw1_Kudinov_Daniil\Csharp2_hw_Kudinov_Daniil\bin\Debug\Csharp2_hw_Kudinov_Daniil.pdb

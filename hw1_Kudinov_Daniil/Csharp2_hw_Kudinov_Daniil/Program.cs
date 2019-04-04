@@ -1,0 +1,25 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace Game_Kudinov_Daniil
+{
+    /// <summary>
+    /// Кудинов Даниил
+    /// </summary>
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Form form = new Form
+            {
+                Width = Screen.PrimaryScreen.Bounds.Width,
+                Height = Screen.PrimaryScreen.Bounds.Height
+            };
+            Game.Init(form);
+            form.Show();
+            Game.Load();
+            Game.Draw();
+            Application.Run(form);
+        }
+    }
+}
